@@ -1,6 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
+
+import DashView from './layouts/Dash.vue'
+import LoginView from './layouts/Login.vue'
+import NotFoundView from './layouts/NotFound.vue'
+
+// Views
+import DashboardView from './views/Dashboard.vue'
+import AccountView from './views/Account.vue'
+import ProfileView from './views/Profile.vue'
 
 Vue.use(Router)
 
@@ -9,17 +17,40 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
-      name: 'home',
-      component: Home
+      path: '/login',
+      name: 'login',
+      component: LoginView
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      path: '/',
+      name: 'home',
+      component: DashView,
+      children: [
+        {
+          path: 'dashboard',
+          alias: '',
+          component: DashboardView,
+          name: 'Dashboard',
+          meta: { description: 'Overview of environment' }
+        },
+        {
+          path: 'account',
+          component: AccountView,
+          name: 'Account',
+          meta: { description: 'Simple and advance table in CoPilot' }
+        },
+        {
+          path: 'profile',
+          component: ProfileView,
+          name: 'Profile',
+          meta: { description: 'Simple and advance table in CoPilot' }
+        }
+      ]
+    },
+    {
+      // Page not found handler - 404
+      path: '*',
+      component: NotFoundView
     }
   ]
 })
