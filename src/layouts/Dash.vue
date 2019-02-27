@@ -1,6 +1,20 @@
 <template>
-  <div>
-    <span>Dashboard</span>
+  <v-app>
+    <Navbar/>
     <router-view></router-view>
-  </div>
+    <!-- <Footer/> -->
+  </v-app>
 </template>
+
+<script>
+import Navbar from '@/components/Navbar'
+
+export default {
+  components: {
+    Navbar
+  },
+  data: () => ({
+
+  })
+}
+</script>

@@ -1,0 +1,23 @@
+[33mcommit a5f357089ff6f59162a66865c9a8a51891e7f64f[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Purwanto <purwanto1337@gmail.com>
+Date:   Wed Feb 27 13:57:25 2019 +0700
+
+    Add basic routing and layouting
+
+[33mcommit 33244d36466a83e988bb36a8285d8ea10208e063[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Purwanto <purwanto1337@gmail.com>
+Date:   Wed Feb 27 13:22:37 2019 +0700
+
+    Add vuetify
+
+[33mcommit dac3ab0df58aa0f6d46f2535220867fcf439d9d9[m
+Author: Purwanto <purwanto1337@gmail.com>
+Date:   Wed Feb 27 13:17:31 2019 +0700
+
+    Add boilerplate using vue-cli
+
+[33mcommit 60fa1e3a1e4cea9bff54a69c65171608d72ee9c7[m
+Author: Purwanto <purwanto1337@gmail.com>
+Date:   Wed Feb 27 00:39:01 2019 +0700
+
+    Initial commit
